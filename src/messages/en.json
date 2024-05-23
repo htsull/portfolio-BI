@@ -1,0 +1,11 @@
+{
+	"Index": {
+		"title": "Hello world!"
+	},
+	"Menu": {
+		"Home": "home",
+		"Resume": "resume",
+		"Projects": "projects",
+		"Contacts": "contacts"
+	}
+}

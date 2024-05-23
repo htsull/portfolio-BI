@@ -1,0 +1,11 @@
+{
+	"Index": {
+		"title": "Salut le monde!"
+	},
+	"Menu": {
+		"Home": "Accueil",
+		"Resume": "CV",
+		"Projects": "projets",
+		"Contacts": "contacts"
+	}
+}
