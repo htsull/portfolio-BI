@@ -1,14 +1,16 @@
-import { link } from "fs";
-import { useTranslations } from "next-intl";
-import React from "react";
+import { useMessages, useTranslations } from "next-intl";
 
 const menu = () => {
-	const t = useTranslations("Menu");
-	const keys = ["Home", "Resume"] as const;
+	const t = useTranslations("MenuItems");
+	const messages = useMessages();
+	const keys = Object.keys(messages.MenuItems);
+	// console.log(messages);
 	return (
 		<div>
 			{keys.map((key) => (
-				<li className="capitalize">{t(`${key}`)}</li>
+				<li key={key} className="capitalize">
+					{t(`${key}.label`)}
+				</li>
 			))}
 		</div>
 	);

@@ -2,10 +2,26 @@
 	"Index": {
 		"title": "Hello world!"
 	},
-	"Menu": {
-		"Home": "home",
-		"Resume": "resume",
-		"Projects": "projects",
-		"Contacts": "contacts"
+	"MenuItems": {
+		"Home": {
+			"label": "home",
+			"href": "/",
+			"id": ""
+		},
+		"Resume": {
+			"label": "resume",
+			"href": "/resume",
+			"id": ""
+		},
+		"Projects": {
+			"label": "projects",
+			"href": "/projects",
+			"id": ""
+		},
+		"Contacts": {
+			"label": "contact",
+			"href": "/contact",
+			"id": ""
+		}
 	}
 }

@@ -24,7 +24,6 @@ export default async function RootLayout({
 	params: { locale },
 }: RootLayoutProps) {
 	const messages = await getMessages();
-
 	return (
 		<html lang={locale}>
 			<body className={inter.className}>
