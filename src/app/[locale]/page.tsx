@@ -1,12 +1,11 @@
-import { useTranslations } from "next-intl";
-import { Link } from "@/lib/navigation";
+import Hero from "@/components/Hero";
 
 export default function Home() {
-	const t = useTranslations("Index");
-
 	return (
-		<div className="flex flex-col">
-			<p>{t("title")}</p>
-		</div>
+		<main className="flex relative bg-black-100 justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+			<div className="max-w-7xl w-full">
+				<Hero />
+			</div>
+		</main>
 	);
 }
