@@ -1,71 +1,29 @@
 import Hero from "@/components/Hero";
+import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { BgBeams } from "@/components/ui/BgBeams";
 import FloatingItems from "@/components/ui/FloatingItems";
+import { bentoGridItems } from "../../../data";
 
 export default function Home() {
+	console.log(bentoGridItems);
+
 	return (
-		<main className="flex relative bg-black-100 justify-center items-center flex-col  mx-auto sm:px-10 px-5">
+		<main className="flex relative bg-black-100 justify-center items-center flex-col  mx-auto sm:px-10 px-5 z-10">
 			<div className="max-w-7xl w-full ">
-				<BgBeams className="h-full border border-blue-600" />
 				<Hero />
-				{/* <div className="flex flex-col">
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-					<p className="text-white">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-						accusamus necessitatibus nam atque qui dicta ex aspernatur eveniet
-						minus pariatur quaerat tempora recusandae expedita dolores?
-						Suscipit, dicta dolore. Nesciunt, soluta?
-					</p>
-				</div> */}
+				<BentoGrid>
+					{bentoGridItems.map((item, i) => (
+						<BentoGridItem
+							key={i}
+							title={item.title}
+							description={item.description}
+						/>
+					))}
+				</BentoGrid>
+
 				<FloatingItems />
 			</div>
+			<BgBeams className="-z-10 h-full border border-blue-600" />
 		</main>
 	);
 }

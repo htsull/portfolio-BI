@@ -8,7 +8,6 @@ const Hero = () => {
 	return (
 		<div className="pb-5 pt-20 flex flex-col border border-red-500">
 			<div className="flex flex-col items-center">
-				{/* <BgBeams /> */}
 				<div className="max-w-[70vw] py-10">
 					<div className="flex flex-col text-center items-center justify-center">
 						<TextGenerateEffect
@@ -25,8 +24,8 @@ const Hero = () => {
 						<MagicButton
 							title="More about my work"
 							position="right"
-							icon={<FaLocationArrow className="hover:rotate-45" />}
-							otherClasses="gap-2 "
+							icon={<FaLocationArrow />}
+							otherClasses="gap-2"
 						/>
 					</div>
 				</div>
