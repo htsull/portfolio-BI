@@ -1,5 +1,4 @@
 "use client";
-import { BgBeams } from "./ui/BgBeams";
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { FaLocationArrow } from "react-icons/fa";
@@ -7,9 +6,9 @@ const Hero = () => {
 	const words1 = '"I am inevitable... just like the need for accurate data."';
 	const words2 = "— Inspired by Thanos";
 	return (
-		<div className="pb-20 pt-20 flex flex-col">
+		<div className="pb-5 pt-20 flex flex-col border border-red-500">
 			<div className="flex flex-col items-center">
-				<BgBeams />
+				{/* <BgBeams /> */}
 				<div className="max-w-[70vw] py-10">
 					<div className="flex flex-col text-center items-center justify-center">
 						<TextGenerateEffect
